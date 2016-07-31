@@ -1,5 +1,4 @@
-# Wallet [![Build
-Status](https://travis-ci.org/rpereira/wallet.svg?branch=master)](https://travis-ci.org/rpereira/wallet)
+# Wallet [![Build Status](https://travis-ci.org/rpereira/wallet.svg?branch=master)](https://travis-ci.org/rpereira/wallet)
 
 To start your Phoenix app:
 
