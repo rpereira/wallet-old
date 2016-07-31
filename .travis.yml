@@ -1,36 +1,29 @@
 language: elixir
-
 elixir:
-  - 1.3.1
-
+- 1.3.1
 otp_release:
-  - 18.2.1
-
+- 18.2.1
 addons:
   postgresql: '9.4'
-
 before_script:
-  - git config --global user.email "rap@example.com"
-  - git config --global user.name "Rui Pereira"
-  - psql -c 'create database api_test;' -U postgres
-  - mix do ecto.create, ecto.migrate
-
+- git config --global user.email "rap@example.com"
+- git config --global user.name "Rui Pereira"
+- psql -c 'create database api_test;' -U postgres
+- mix do ecto.create, ecto.migrate
 script:
-  - MIX_ENV=dev mix deps.get
-  - gem install overcommit
-  - overcommit --sign
-  - overcommit -r
-  - mix test
-
+- MIX_ENV=dev mix deps.get
+- gem install overcommit
+- overcommit --sign
+- overcommit -r
+- mix test
+cache:
+  directories:
+  - _build
+  - deps
 deploy:
   provider: heroku
   api_key:
-    secure: txRxOREqMj7HXV4xL+Fxy+S0rx9BvBJlmSW6ZeHWpSrZMFmjc8LFu9rFHd03+lK9q7milcs6WxqgAmcqkCr79W3w5SZQPJbkbDVcuMMyyQwa5t9fHJi1vqTXtKS0z35re2ys5c1w0ziEYoqal7cLCbLWQo/wTBPpp9nwXTP3QH3Wm1VxVlGK6+0OKMy2wMksw0mMrhCeEqaLMmV3C2Vx0ygobIW5LWLtZbRl4C9U/xznhJhJJoBLKpiN+dUXlLo2jV68mYKAxrxTcQthrI5Q/u27nOT69/GIMtnIbvJrYFkNwhWUp0pOacCKqdey+HE7NV505B0QL4a3OZIadKMPQL6YM/AefD55xf+Q2aDk4kiaCYq2ycPMepfw1qeVZxvKn5vSJgfpmXzxQRIHgSr5u7IoIPms6WiMdfJVAObSbmW6CJ/Ggu02ze7N5JbyNB9gKQL4tbd30Kud3OUj9+kKOYRp11wvwvk3cmeCHJoo3R1v/aj6iB7sLJQwkl9LtMQjx9ix647gwj98gxb1I/DBn43UZ/G4WfYjKPRPmubxFHAFooGdZVesDUjjDmRouZ7Jes7kWCQGav94fP6Tiyz7ygJU6GDAhAGABEd+Zrl51NauztHwmMnTsejg5mfetUnVpaFvAjDGaNAVoGYN6qwUf+H2yYNZ8XZAVfgnbj3XOSM=
-  app: warm-plateau-55663
+    secure: PVg9DE63cN7gHiTs8CewIud8nnOs1xtTIsR0OJsCxllSNhV/WuX1zq5i+mxN1TqqfrI1w88l+rSXkX+L/etLE5bQ184+iVuXkcf3TDJV/sXDxL/gcAq2jhlY1reSq3FfyoTov6LqFOtcG4wfQxHV076wcsre1w2IYAX1wIg4d8L8X/FXvv56gGKxFAsPE8cf+mDEjaX9YRSH6dlTUADFfXylaj3GMp0esk0qZdukmQ3C9K2gELdbDdJckJaKKjxUCswKAhdzjYSjv8AAKxhzCShTA9nvn/7UdsomPF93ny31PXd94FD8FIRIpL3Fm6M9dTv6wr6CHvy9PIjHUPvGQ+HDZeyLVHiCwGc7yILfi0wRzNAU7dq2TW0la4PHjbe0X4OqRmhC7/vIHC8/1sxyk8KnEq8+eefIrpUkZDQR2140JSVjiVuApdPSMMUl/4SConnrcEbl/J9XkM4q70EPGpik20LFCucYiCV/IzwTrKcHjYnfJvbHJ9bJhWYeqy4ScD/lBhE2dNWhhEkQ6Qrtm3PLIxQ/0pfbHY1HNDNOV09kMjTNESdYRggrVcnrif7RpczJO5WeUCIpHazzvCWOWuN0pmUWnqu1NXN2nxis974Xz2gkMakQ8f7LKftx8Nh6p2ifHh5CY1jchB6UWYpmKbiFjdDQjRp1tBGsfoqbbVk=
+  app: immense-garden-64839
   on:
-    repo: blackcucaracha/api
-
-cache:
-  directories:
-    - _build
-    - deps
+    repo: rpereira/wallet
