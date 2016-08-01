@@ -1,4 +1,6 @@
-# Wallet [![Build Status](https://travis-ci.org/rpereira/wallet.svg?branch=master)](https://travis-ci.org/rpereira/wallet)
+# [Wallet][prod_url] [![Build Status](https://travis-ci.org/rpereira/wallet.svg?branch=master)](https://travis-ci.org/rpereira/wallet)
+
+[prod_url]: https://immense-garden-64839.herokuapp.com/
 
 To start your Phoenix app:
 
