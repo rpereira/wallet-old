@@ -1,4 +1,4 @@
-# [Wallet][prod_url] [![Build Status](https://travis-ci.org/rpereira/wallet.svg?branch=master)](https://travis-ci.org/rpereira/wallet)
+# [Wallet][prod_url] [![Build Status](https://travis-ci.org/rpereira/wallet.svg?branch=master)](https://travis-ci.org/rpereira/wallet) [![Coverage Status](https://coveralls.io/repos/github/rpereira/wallet/badge.svg?branch=master)](https://coveralls.io/github/rpereira/wallet?branch=master)
 
 [prod_url]: https://immense-garden-64839.herokuapp.com/
 
